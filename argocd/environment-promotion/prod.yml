@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/sieunhantanbao/sd2411_azure_infrastructure
+    targetRevision: main
+    path: environment-promotion/envs/prod
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: prod

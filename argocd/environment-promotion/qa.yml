@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: qa
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/sieunhantanbao/sd2411_azure_infrastructure
+    targetRevision: main
+    path: environment-promotion/envs/qa
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: qa
