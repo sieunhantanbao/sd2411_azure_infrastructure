@@ -1,3 +1,10 @@
+# Create resource group
+resource "azurerm_resource_group" "rg" {
+  location = var.resource_group_location
+  name     = var.resource_group_name
+}
+
+# Create AKS cluster
 resource "azurerm_kubernetes_cluster" "k8s" {
     name                = var.cluster_name
     location            = var.locationk8s
@@ -8,7 +15,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
         admin_username = "ubuntu"
 
         ssh_key {
-            key_data = var.ssh_public_key
+            key_data = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
         }
     }
 

@@ -7,10 +7,6 @@ variable "agent_count" {
     default = 2
 }
 
-variable "ssh_public_key" {
-    default = "ssh_public_key"
-}
-
 variable "dns_prefix" {
     default = "sd2411-my-todo-dns"
 }
@@ -20,9 +16,12 @@ variable cluster_name {
 }
 
 variable resource_group_name {
-    default = "sd2411"
+    default = "sd2411_aks"
 }
 
+variable ssh_key_name {
+  default = "mySSHKey"
+}
 variable locationk8s {
     default = "southcentralus"
 }
