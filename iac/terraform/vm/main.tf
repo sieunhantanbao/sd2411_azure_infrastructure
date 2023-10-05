@@ -116,5 +116,5 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
   admin_password = var.admin_password
   disable_password_authentication = false
   # Install docker and Jenkins
-  custom_data    = base64encode(data.template_file.linux-vm-cloud-init.rendered)
+  # custom_data    = base64encode(data.template_file.linux-vm-cloud-init.rendered)
 }

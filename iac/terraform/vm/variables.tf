@@ -19,5 +19,5 @@ variable "admin_username" {
 
 variable "admin_password" {
   default = "Ubuntu123!@#"
-  description = "The username to login to the VM"
+  description = "The password to login to the VM"
 }
