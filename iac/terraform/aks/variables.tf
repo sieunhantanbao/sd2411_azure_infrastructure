@@ -1,13 +1,13 @@
-variable "resource_group_location" {
+variable resource_group_location {
   default       = "southcentralus"
   description   = "Location of the resource group."
 }
 
-variable "agent_count" {
+variable agent_count {
     default = 2
 }
 
-variable "dns_prefix" {
+variable dns_prefix {
     default = "sd2411-my-todo-dns"
 }
 
@@ -16,7 +16,12 @@ variable cluster_name {
 }
 
 variable resource_group_name {
-    default = "sd2411_aks"
+    default = "rg_sd2411_aks"
+}
+
+variable admin_username {
+  default = "ubuntu"
+  description = "The username to login to the VM"
 }
 
 variable ssh_key_name {
@@ -34,6 +39,6 @@ variable aks_service_principal_client_secret{
     default = "aks_service_principal_client_secret"
 }
 
-variable aks_service_principal_object_id {
-    default= "aks_service_principal_object_id"
-}
+# variable aks_service_principal_object_id {
+#     default= "aks_service_principal_object_id"
+# }
