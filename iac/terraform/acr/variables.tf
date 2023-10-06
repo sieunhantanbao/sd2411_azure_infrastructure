@@ -7,5 +7,5 @@ variable resource_group_name {
 }
 
 variable acr_name {
-  default = "acr_sd2411"
+  default = "acr_anhnguyens"
 }
