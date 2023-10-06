@@ -1,5 +1,5 @@
 variable "resource_group_location" {
-  default       = "southeastasia"
+  default       = "centralus"
   description   = "Location of the resource group."
 }
 
