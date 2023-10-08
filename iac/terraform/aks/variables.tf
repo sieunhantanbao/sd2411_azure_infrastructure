@@ -1,5 +1,5 @@
 variable resource_group_location {
-  default       = "southcentralus"
+  default       = "centralus"
   description   = "Location of the resource group."
 }
 
@@ -28,7 +28,7 @@ variable ssh_key_name {
   default = "mySSHKey"
 }
 variable locationk8s {
-    default = "southcentralus"
+    default = "centralus"
 }
 
 # variable aks_service_principal_app_id {

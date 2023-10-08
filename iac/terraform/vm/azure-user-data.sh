@@ -15,9 +15,10 @@ sudo apt install -y docker-ce
 # To run docker without sudo
 sudo groupadd docker
 sudo usermod -aG docker ubuntu
+sudo usermod -a -G docker jenkins
 
 
-###############################INSTALL JENKINS###############################33
+###############################INSTALL JENKINS########################################
 
 sudo apt-get update
 sudo apt install openjdk-11-jdk -y
@@ -33,3 +34,8 @@ sudo ufw allow 8080
 sudo ufw allow ssh
 sudo ufw --force enable
 sudo ufw status
+
+###############################INSTALL KUBECTL CLI###############################
+sudo apt update
+sudo snap install kubectl --classic
+
