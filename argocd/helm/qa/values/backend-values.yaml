@@ -1,0 +1,15 @@
+# Replica count for the backend deployment
+replicaCount: 2
+
+# name of resources such as deployment, container, service
+name: backend
+
+# Image repository and tag for the backend container
+image:
+  repository: acranhnguyens.azurecr.io/backend
+  pullPolicy: Always
+  tag: latest
+  imagePullSecret: 'my-acr-secret'
+
+# Port for the backend service
+servicePort: 3000

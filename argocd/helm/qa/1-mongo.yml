@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mongodb-qa
+  namespace: argocd
+spec:
+  destination:
+    namespace: qa
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/sieunhantanbao/sd2411_azure_infrastructure.git
+    targetRevision: main
+    path: helm-charts/charts/mongodb/
+  project: default
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+  # sourcePath: manifests/
+  helm:
+    valueFiles:
+    - ./values/mongo-values.yaml
+    
