@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/sieunhantanbao/sd2411_azure_infrastructure.git
     targetRevision: main
-    path: argocd/helm/qa/mongo
+    path: argocd/helm/qa/apps/mongo
   project: default
   syncPolicy:
     automated: {}

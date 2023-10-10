@@ -17,7 +17,9 @@ Reference: https://harveynashvn-my.sharepoint.com/:w:/g/personal/lecao_nashtechg
 kubectl create namespace argocd
 
 // Step 2: Install argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+// kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+// Go to the root of repository and run command
+kubectl apply -n argocd -f install-argocd.yaml
 
 // Step 3: Edit argocd-server to change (ClusterIP to LoadBalancer)
 kubectl edit svc argocd-server -n argocd
@@ -26,3 +28,4 @@ kubectl edit svc argocd-server -n argocd
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath={.data.password} | base64 -d
 
 // Step 5: Login to ArgoCD by the External IP (URL) from the argocd-server service
+kubectl get svc argocd-server -n argocd
