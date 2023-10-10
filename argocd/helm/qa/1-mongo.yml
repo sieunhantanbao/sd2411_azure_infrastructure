@@ -12,6 +12,7 @@ spec:
     targetRevision: main
     path: argocd/helm/qa/mongo
   project: default
+  configManagementPlugin: kustomize-build-with-helm
   syncPolicy:
     automated: {}
     syncOptions:
