@@ -6,9 +6,9 @@ name: backend
 
 # Image repository and tag for the backend container
 image:
-  repository: acranhnguyens.azurecr.io/backend
+  repository: sieunhantanbao/backend
   pullPolicy: Always
-  tag: "10"
+  tag: latest
   imagePullSecret: 'my-acr-secret'
 
 # Port for the backend service
