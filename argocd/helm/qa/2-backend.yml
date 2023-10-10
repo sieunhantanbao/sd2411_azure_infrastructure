@@ -16,4 +16,3 @@ spec:
     automated: {}
     syncOptions:
       - CreateNamespace=true
-  sourcePath: manifests/
