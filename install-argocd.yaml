@@ -18857,11 +18857,7 @@ metadata:
     app.kubernetes.io/part-of: argocd
   name: argocd-cm
 data:
-  configManagementPlugins: |
-    - name: kustomize-build-with-helm
-      generate:
-        command: [ "sh", "-c" ]
-        args: [ "kustomize build --enable-helm" ]
+  kustomize.buildOptions: --enable-alpha-plugins --enable-helm --load-restrictor LoadRestrictionsNone
 ---
 apiVersion: v1
 kind: ConfigMap
