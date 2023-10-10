@@ -11,8 +11,6 @@ spec:
     repoURL: https://github.com/sieunhantanbao/sd2411_azure_infrastructure.git
     targetRevision: main
     path: argocd/helm/qa/mongo
-    plugin:
-      name: kustomize-build-with-helm
   project: default
   syncPolicy:
     automated: {}
