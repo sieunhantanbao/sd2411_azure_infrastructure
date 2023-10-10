@@ -10,13 +10,7 @@ spec:
   source:
     repoURL: https://github.com/sieunhantanbao/sd2411_azure_infrastructure.git
     targetRevision: main
-    path: argocd/helm/qa/
-    helm:
-      chart: "mongodb"
-      releaseName: qa-mongo-release
-      repoURL: https://sieunhantanbao.github.io/sd2411-helm-charts/
-      valueFiles:
-      - ./values/mongo-values.yaml
+    path: argocd/helm/qa/mongo
   project: default
   syncPolicy:
     automated: {}

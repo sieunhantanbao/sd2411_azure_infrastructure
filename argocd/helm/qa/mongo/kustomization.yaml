@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmCharts:
+- name: mongodb
+  repo: https://sieunhantanbao.github.io/sd2411-helm-charts/
+  version: "1.0.0"
+  releaseName: mongodb
+  namespace: qa
+  valuesFile: mongo-values.yaml
