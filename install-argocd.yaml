@@ -18856,6 +18856,12 @@ metadata:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
   name: argocd-cm
+data:
+  configManagementPlugins: |
+    - name: kustomize-build-with-helm
+      generate:
+        command: [ "sh", "-c" ]
+        args: [ "kustomize build --enable-helm" ]
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -20054,8 +20060,6 @@ spec:
           periodSeconds: 30
           timeoutSeconds: 5
         name: argocd-server
-        command:
-        - "--enable-helm"
         ports:
         - containerPort: 8080
         - containerPort: 8083
