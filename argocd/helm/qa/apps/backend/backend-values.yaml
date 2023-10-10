@@ -9,7 +9,7 @@ image:
   repository: sieunhantanbao/backend
   pullPolicy: Always
   tag: latest
-  imagePullSecret: 'my-acr-secret'
+  imagePullSecret: 'my-acr-secret-backend'
 
 # Port for the backend service
 servicePort: 3000
