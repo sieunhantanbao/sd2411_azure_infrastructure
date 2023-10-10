@@ -8,7 +8,7 @@ name: frontend
 image:
   repository: acranhnguyens.azurecr.io/frontend
   pullPolicy: Always
-  tag: latest
+  tag: "10"
   imagePullSecret: 'my-acr-secret'
 
 # Port for the frontend service

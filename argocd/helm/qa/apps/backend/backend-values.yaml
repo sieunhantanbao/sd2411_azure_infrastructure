@@ -8,7 +8,7 @@ name: backend
 image:
   repository: acranhnguyens.azurecr.io/backend
   pullPolicy: Always
-  tag: latest
+  tag: "10"
   imagePullSecret: 'my-acr-secret'
 
 # Port for the backend service
