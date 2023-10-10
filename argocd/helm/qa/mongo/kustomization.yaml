@@ -4,7 +4,7 @@ kind: Kustomization
 helmCharts:
 - name: mongodb
   repo: https://sieunhantanbao.github.io/sd2411-helm-charts/
-  version: "1.0.0"
+  version: "0.1.0"
   releaseName: mongodb
   namespace: qa
   valuesFile: mongo-values.yaml
