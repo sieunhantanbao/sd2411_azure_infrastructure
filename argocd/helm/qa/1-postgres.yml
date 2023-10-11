@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mongodb-qa
+  name: postgresdb-qa
   namespace: argocd
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/sieunhantanbao/sd2411_azure_infrastructure.git
     targetRevision: main
-    path: argocd/helm/qa/apps/mongo
+    path: argocd/helm/qa/apps/postgresdb
   project: default
   syncPolicy:
     automated: {}

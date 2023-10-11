@@ -12,4 +12,13 @@ image:
   imagePullSecret: 'qa-acr-secret'
 
 # Port for the backend service
-servicePort: 3000
+servicePort: 80
+
+env:
+  normal:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
+    - name: ASPNETCORE_URLS
+      value: https://+
+    - name: MyDbContext
+      value: "Server=postgresdb;Database=TodoItem_DB;User Id=postgres;Password=postgres;"

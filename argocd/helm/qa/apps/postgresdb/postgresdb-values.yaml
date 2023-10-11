@@ -2,12 +2,15 @@
 replicaCount: 2
 
 # name of resources such as statefulset, container, service
-name: mongodb
+name: postgresdb
 
 # Image repository and tag for the database container
 image:
-  repository: mongo
-  tag: latest
+  repository: postgres
+  tag: 15.4-alpine
 
 # Port for the database service
-servicePort: 27017
+servicePort: 5432
+
+username: postgres
+password: postgres
