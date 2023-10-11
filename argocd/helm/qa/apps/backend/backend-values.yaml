@@ -7,9 +7,9 @@ name: backend
 # Image repository and tag for the backend container
 image:
   repository: sieunhantanbao/backend
-  pullPolicy: Always
   tag: latest
-  # imagePullSecret: 'my-acr-secret-backend'
+  pullPolicy: Always
+  imagePullSecret: 'qa-acr-secret'
 
 # Port for the backend service
 servicePort: 3000

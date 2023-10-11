@@ -7,9 +7,9 @@ name: frontend
 # Image repository and tag for the frontend container
 image:
   repository: sieunhantanbao/backend
-  pullPolicy: Always
   tag: latest
-  # imagePullSecret: 'my-acr-secret-frontend'
+  pullPolicy: Always
+  imagePullSecret: 'qa-acr-secret'
 
 # Port for the frontend service
 servicePort: 3000
