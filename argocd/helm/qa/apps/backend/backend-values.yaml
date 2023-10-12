@@ -21,4 +21,4 @@ env:
     - name: ASPNETCORE_URLS
       value: https://+
     - name: MyDbContext
-      value: "Server=postgresdb;Database=TodoItem_DB;User Id=postgres;Password=postgres;"
+      value: 'User ID=postgres;Password=postgres;Host=postgresdb;Port=5432;Database=ToDoApp;Pooling=true;'
