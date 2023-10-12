@@ -4,7 +4,7 @@ kind: Kustomization
 helmCharts:
 - name: postgresdb
   repo: https://sieunhantanbao.github.io/sd2411-helm-charts/
-  version: "0.2.0"
+  version: "0.2.1"
   releaseName: postgresdb
   namespace: qa
   valuesFile: postgresdb-values.yaml
