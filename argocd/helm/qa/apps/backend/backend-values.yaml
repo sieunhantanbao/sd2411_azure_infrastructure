@@ -7,7 +7,7 @@ name: backend
 # Image repository and tag for the backend container
 image:
   repository: acranhnguyens.azurecr.io/backend
-  tag: 18
+  tag: 19
   pullPolicy: Always
   imagePullSecret: 'qa-acr-secret'
 
