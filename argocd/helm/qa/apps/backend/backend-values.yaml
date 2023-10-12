@@ -18,7 +18,7 @@ env:
   normal:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
-    - name: ASPNETCORE_URLS
-      value: https://+
+    # - name: ASPNETCORE_URLS
+    #   value: https://+
     - name: MyDbContext
       value: 'User ID=postgres;Password=postgres;Host=postgresdb;Port=5432;Database=ToDoApp;Pooling=true;'
