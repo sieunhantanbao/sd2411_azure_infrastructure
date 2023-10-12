@@ -14,7 +14,6 @@ image:
 # Port for the frontend service
 servicePort: 80
 tls:
-  host: qa.com.vn
   secretName: 'qa-tls-secret'
 apiAddress: http://backend
 env:
