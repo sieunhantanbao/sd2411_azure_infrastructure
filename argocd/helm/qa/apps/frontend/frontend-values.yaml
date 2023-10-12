@@ -14,6 +14,8 @@ image:
 # Port for the frontend service
 servicePort: 80
 
+tlssecretName: 'qa-tls-secret'
+
 env:
   normal:
     - name: ASPNETCORE_ENVIRONMENT
