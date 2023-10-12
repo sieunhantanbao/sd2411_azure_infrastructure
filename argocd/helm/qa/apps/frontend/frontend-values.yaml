@@ -16,12 +16,8 @@ servicePort: 80
 tls:
   host: qa.com.vn
   secretName: 'qa-tls-secret'
-
+apiAddress: http://backend
 env:
   normal:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
-    # - name: ASPNETCORE_URLS
-    #   value: https://+
-    - name: ApiAddress
-      value: http://backend

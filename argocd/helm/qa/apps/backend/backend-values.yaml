@@ -14,11 +14,9 @@ image:
 # Port for the backend service
 servicePort: 80
 
+connectionString: "Server=postgresdb;Database=TodoItem_DB;User Id=postgres;Password=postgres;"
+
 env:
   normal:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
-    # - name: ASPNETCORE_URLS
-    #   value: https://+
-    - name: MyDbContext
-      value: Server=postgresdb;Port=5432;Database=ToDoApp;User Id=postgres;Password=postgres;Pooling=true;
