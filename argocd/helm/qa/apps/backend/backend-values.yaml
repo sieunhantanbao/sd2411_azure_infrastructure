@@ -14,7 +14,7 @@ image:
 # Port for the backend service
 servicePort: 80
 
-connectionString: "Server=postgresdb;Database=TodoItem_DB;User Id=postgres;Password=postgres;"
+connectionString: "Server=postgresdb;Database=ToDoApp;User Id=postgres;Password=postgres;"
 
 env:
   normal:
