@@ -7,7 +7,7 @@ name: frontend
 # Image repository and tag for the frontend container
 image:
   repository: acranhnguyens.azurecr.io/frontend
-  tag: 21
+  tag: 22
   pullPolicy: Always
   imagePullSecret: 'qa-acr-secret'
 
@@ -21,3 +21,7 @@ env:
   normal:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
+    - name: ENVIRONMENT_NAME
+      value: QA
+    - name: BUILD_ID
+      value: 22 # should be same value with image.tag
