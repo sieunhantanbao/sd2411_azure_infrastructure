@@ -14,6 +14,7 @@ image:
 # Port for the frontend service
 servicePort: 80
 tls:
+  host: qa.sd2411.pishard.com
   secretName: 'qa-tls-secret'
 apiAddress: http://backend
 env:
