@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# resources:
+# - secret.yaml
+
+helmCharts:
+- name: frontend
+  repo: https://sieunhantanbao.github.io/sd2411-helm-charts/
+  version: "0.8.0"
+  releaseName: frontend
+  namespace: prod
+  valuesFile: frontend-values.yaml

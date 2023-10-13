@@ -1,0 +1,16 @@
+# Replica count for the database deployment
+replicaCount: 1
+
+# name of resources such as statefulset, container, service
+name: postgresdb
+
+# Image repository and tag for the database container
+image:
+  repository: postgres
+  tag: 15.4-alpine
+
+# Port for the database service
+servicePort: 5432
+
+username: postgres
+password: postgres
