@@ -7,7 +7,7 @@ kind: Kustomization
 helmCharts:
 - name: frontend
   repo: https://sieunhantanbao.github.io/sd2411-helm-charts/
-  version: "0.7.0"
+  version: "0.8.0"
   releaseName: frontend
   namespace: qa
   valuesFile: frontend-values.yaml
