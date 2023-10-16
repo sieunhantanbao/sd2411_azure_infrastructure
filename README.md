@@ -45,7 +45,7 @@ While setup the Jenkins, please make sure the plugins below get installed
 ### Prerequisite setup
 - Application's source code: https://github.com/sieunhantanbao/sd2411_msa
 - The CI project: https://github.com/sieunhantanbao/sd2411-devops-ci
-- Github Helm chart repository [SD2411 Helm chart](https://sieunhantanbao.github.io/sd2411-helm-charts/) to store the helm packages to be used by the argocd (with helm deployment) below.
+- Github Helm chart repository [SD2411 Helm chart](https://github.com/sieunhantanbao/sd2411-helm-charts) to store the helm packages to be used by the argocd (with helm deployment) below.
 
 ### Deploy application
 - Change directory (cd) to argocd/helm/{environment_name} (i.e. `cd argocd/helm/qa`) and run the below commands
