@@ -3,7 +3,7 @@ replicaCount: 1
 
 # name of resources such as statefulset, container, service
 name: postgresdb
-env: prod
+env: qa
 
 # Image repository and tag for the database container
 image:
