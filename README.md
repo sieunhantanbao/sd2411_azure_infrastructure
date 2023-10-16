@@ -60,4 +60,7 @@ While setup the Jenkins, please make sure the plugins below get installed
 	- Deploy frontend: `kubectl apply -f 3-frontend.yml`
 
 ## Manage the application on the ArgoCD UI
-### TBD
+### Demonstration screenshot
+- ArgoCD UI <br/> ![image info](./images/argocd_qa_apps.png)
+- Frontend-qa application <br/> ![image info](./images/frontend-qa1.png) </br/> ![image info](./images/frontend-qa2.png)
+- ArgoCD UI (multiple environments) <br/> ![image info](./images/argocd_qa_apps_multi_envs.png)
