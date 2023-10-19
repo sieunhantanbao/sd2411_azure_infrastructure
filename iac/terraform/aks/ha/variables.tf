@@ -3,7 +3,7 @@ variable resource_group_name {
 }
 
 variable resource_group_location {
-  default       = "southeastasia"
+  default       = "japaneast"
   description   = "Location of the resource group."
 }
 

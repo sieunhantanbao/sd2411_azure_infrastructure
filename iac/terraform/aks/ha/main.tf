@@ -69,7 +69,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   default_node_pool {
     name                = "agentpool"
     node_count          = var.agent_count
-    vm_size             = "Standard_B2als_v2" // Standard_DS2_v2
+    vm_size             = "Standard_B2s_v2"
     type                = "VirtualMachineScaleSets"
     availability_zones  = ["1", "2"]
     # enable_auto_scaling = true
@@ -85,7 +85,6 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   network_profile {
     network_plugin = "azure"
     service_cidr   = "10.0.0.0/16"
-    pod_cidr       = "10.244.0.0/16"
     dns_service_ip = "10.0.0.10"
     docker_bridge_cidr = "172.17.0.1/16"
     load_balancer_sku = "Standard"
