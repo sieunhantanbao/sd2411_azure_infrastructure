@@ -22,11 +22,3 @@ variable cluster_name {
 variable "tags" {
   default = "Development"
 }
-
-# variable "client_id" {
-#   description = "Azure AD Service Principal Client ID"
-# }
-
-# variable "client_secret" {
-#   description = "Azure AD Service Principal Client Secret"
-# }

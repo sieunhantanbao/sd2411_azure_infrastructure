@@ -1,6 +1,4 @@
 #################### PROVISION THE AKS CLUSTER ###############################
-// Reference https://www.middlewareinventory.com/blog/terraform-aks-example-creating-azure-k8s-cluster-devops-junction/
-
 // Step 1: Init terraform
 terraform init
 
@@ -10,7 +8,7 @@ terraform plan --out tfplan.out
 // Step 3: terraform apply
 terraform apply tfplan.out
 
-az aks get-credentials --resource-group rg_sd2411_aks --name sd2411_k8s_cluster
+az aks get-credentials --resource-group rg_sd2411_aks_ha --name sd2411_k8s_cluster_ha
 #################### INSTALLING ARGO CD ###############################
 Reference: https://harveynashvn-my.sharepoint.com/:w:/g/personal/lecao_nashtechglobal_com/EZRdk4wom9dOs1Svl-YuoTwBqy9njh_kVHpiTIUUQgAP_g?wdOrigin=TEAMS-WEB.p2p_ns.bim&wdExp=TEAMS-CONTROL&wdhostclicktime=1695797738297&web=1
 // Step 1: Create namespace

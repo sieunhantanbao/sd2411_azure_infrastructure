@@ -72,9 +72,6 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     vm_size             = "Standard_B2s_v2"
     type                = "VirtualMachineScaleSets"
     availability_zones  = ["1", "2"]
-    # enable_auto_scaling = true
-    # min_count           = 1
-    # max_count           = 2
     vnet_subnet_id      = azurerm_subnet.worker_nodes_subnet.id
   }
 
@@ -93,10 +90,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
       outbound_ip_prefix_ids = []
     }
   }
-#   service_principal {
-#     client_id     = var.client_id
-#     client_secret = var.client_secret
-#   }
+
   tags = {
     Environment = var.tags
   }

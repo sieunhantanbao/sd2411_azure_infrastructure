@@ -30,15 +30,3 @@ variable ssh_key_name {
 variable locationk8s {
     default = "westcentralus"
 }
-
-# variable aks_service_principal_app_id {
-#     default= "aks_service_principal_app_id"
-# }
-
-# variable aks_service_principal_client_secret{
-#     default = "aks_service_principal_client_secret"
-# }
-
-# variable aks_service_principal_object_id {
-#     default= "aks_service_principal_object_id"
-# }
