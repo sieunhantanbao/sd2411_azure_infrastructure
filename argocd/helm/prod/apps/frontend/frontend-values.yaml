@@ -3,25 +3,13 @@ replicaCount: 2
 
 # name of resources such as deployment, container, service
 name: frontend
-envName: prod
+
 # Image repository and tag for the frontend container
 image:
   repository: acranhnguyens.azurecr.io/frontend
-  tag: 22
+  tag: 26
   pullPolicy: Always
   imagePullSecret: 'prod-acr-secret'
 
 # Port for the frontend service
-servicePort: 80
-# tls:
-#   host: prod.sd2411.pishard.com
-#   secretName: 'prod-tls-secret'
-apiAddress: http://backend
-env:
-  normal:
-    - name: ASPNETCORE_ENVIRONMENT
-      value: Production
-    - name: ENVIRONMENT_NAME
-      value: Production
-    - name: BUILD_ID
-      value: 22 # should be same value with image.tag
+servicePort: 3000

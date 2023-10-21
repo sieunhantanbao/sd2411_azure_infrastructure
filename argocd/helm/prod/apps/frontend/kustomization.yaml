@@ -7,7 +7,7 @@ kind: Kustomization
 helmCharts:
 - name: frontend
   repo: https://sieunhantanbao.github.io/sd2411-helm-charts/
-  version: "5.0.0" # Without ingress
+  version: "1.0.0"
   releaseName: frontend
   namespace: prod
   valuesFile: frontend-values.yaml

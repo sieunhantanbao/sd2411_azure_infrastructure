@@ -7,16 +7,9 @@ name: backend
 # Image repository and tag for the backend container
 image:
   repository: acranhnguyens.azurecr.io/backend
-  tag: 22
+  tag: 26
   pullPolicy: Always
   imagePullSecret: 'prod-acr-secret'
 
 # Port for the backend service
-servicePort: 80
-
-connectionString: "Server=postgresdb;Database=ToDoApp_Prod;User Id=postgres;Password=postgres;"
-
-env:
-  normal:
-    - name: ASPNETCORE_ENVIRONMENT
-      value: Production
+servicePort: 3000
