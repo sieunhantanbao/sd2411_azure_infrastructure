@@ -116,6 +116,6 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
   # admin_password = random_password.linux-vm-password.result
   admin_password = var.admin_password
   disable_password_authentication = false
-  # Install docker and Jenkins
+  # Install docker, Jenkins, Trivy, Kubectl CLI
   custom_data    = base64encode(data.template_file.linux-vm-cloud-init.rendered)
 }

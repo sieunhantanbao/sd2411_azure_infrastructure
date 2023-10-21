@@ -16,8 +16,6 @@ sudo apt install -y docker-ce
 sudo groupadd docker
 sudo usermod -aG docker ubuntu
 sudo usermod -a -G docker jenkins
-
-
 ###############################INSTALL JENKINS########################################
 
 sudo apt-get update
@@ -38,4 +36,11 @@ sudo ufw status
 ###############################INSTALL KUBECTL CLI###############################
 sudo apt update
 sudo snap install kubectl --classic
+
+###############################INSTALL TRIVY###############################
+sudo apt install wget apt-transport-https gnupg lsb-release -y
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+sudo apt-get update
+sudo apt install trivy -y
 
