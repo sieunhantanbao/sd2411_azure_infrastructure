@@ -12,4 +12,4 @@ image:
   imagePullSecret: 'qa-acr-secret'
 
 # Port for the backend service
-servicePort: 80
+servicePort: 3000
