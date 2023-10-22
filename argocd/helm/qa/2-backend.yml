@@ -6,6 +6,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: acranhnguyens.azurecr.io/backend
     argocd-image-updater.argoproj.io/example.update-strategy: latest
+    argocd-image-updater.argoproj.io/img-alias.pull-secret: pullsecret:qa/qa-acr-secret
 spec:
   destination:
     namespace: qa
