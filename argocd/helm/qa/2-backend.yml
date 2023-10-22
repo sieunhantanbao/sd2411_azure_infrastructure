@@ -3,6 +3,9 @@ kind: Application
 metadata:
   name: backend-qa
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: acranhnguyens.azurecr.io/backend
+    argocd-image-updater.argoproj.io/example.update-strategy: latest
 spec:
   destination:
     namespace: qa
