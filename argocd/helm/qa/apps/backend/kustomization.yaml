@@ -11,4 +11,4 @@ helmCharts:
   valuesFile: backend-values.yaml
 images:
 - name: acranhnguyens.azurecr.io/backend
-  newTag: "30"
+  newTag: "31"
