@@ -3,6 +3,15 @@ kind: Application
 metadata:
   name: frontend-qa
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: img-alias=acranhnguyens.azurecr.io/frontend
+    argocd-image-updater.argoproj.io/example.update-strategy: latest
+    argocd-image-updater.argoproj.io/img-alias.pull-secret: pullsecret:argocd/azure-container-secret
+    argocd-image-updater.argoproj.io/write-back-method: git       
+    argocd-image-updater.argoproj.io/git-branch: main      
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io 
 spec:
   destination:
     namespace: qa

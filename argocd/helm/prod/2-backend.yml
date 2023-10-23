@@ -3,6 +3,13 @@ kind: Application
 metadata:
   name: backend-prod
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: img-alias=acranhnguyens.azurecr.io/backend:~v-prod
+    argocd-image-updater.argoproj.io/example.update-strategy: semver
+    argocd-image-updater.argoproj.io/img-alias.pull-secret: pullsecret:argocd/azure-container-secret
+    argocd-image-updater.argoproj.io/write-back-method: git       
+    argocd-image-updater.argoproj.io/git-branch: main      
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
 spec:
   destination:
     namespace: prod
