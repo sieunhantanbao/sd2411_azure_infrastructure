@@ -18,7 +18,7 @@ kubectl create namespace argocd
 
 // Step 2: Install argocd
 // kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-// Go to the root of repository and run command
+// Go to tools/argocd folder and then run
 kubectl apply -n argocd -f install-argocd.yaml
 
 // Step 3: Edit argocd-server to change (ClusterIP to LoadBalancer)
