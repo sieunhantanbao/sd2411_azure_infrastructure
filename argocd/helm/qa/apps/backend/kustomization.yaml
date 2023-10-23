@@ -5,7 +5,7 @@ kind: Kustomization
 helmCharts:
 - name: backend
   repo: https://sieunhantanbao.github.io/sd2411-helm-charts/
-  version: "2.0.0"
+  version: "3.0.0"
   releaseName: backend
   namespace: qa
   valuesFile: backend-values.yaml
