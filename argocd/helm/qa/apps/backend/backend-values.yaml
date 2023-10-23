@@ -1,5 +1,5 @@
 # Replica count for the backend deployment
-replicaCount: 3
+replicaCount: 1
 
 # name of resources such as deployment, container, service
 name: backend
