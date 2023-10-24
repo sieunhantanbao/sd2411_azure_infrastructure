@@ -11,4 +11,4 @@ helmCharts:
   valuesFile: frontend-values.yaml
 images:
 - name: acranhnguyens.azurecr.io/frontend
-  newTag: "32"
+  newTag: "33"
