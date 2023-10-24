@@ -42,7 +42,7 @@ This will provision an AKS cluster in High Availability (Use Multi-AZs)
 	- `terraform plan --out tfplan.out`
 	- `terraform apply tfplan.out`
 ### Provision Virtual Machine (VMs)
-This will provision an Ubuntu VM with **Docker** and **Jenkins** installed
+This will provision an Ubuntu VM with **Docker**, **Jenkins**, **Trivy**, and **Kubectl** installed
 - Change directory (cd) to iac/terraform/aks/vm: `cd iac/terraform/vm`
 - Modify the variables in the `variables.tf` file to match your requirements.
 - Run below command
@@ -66,7 +66,7 @@ This will provision an Ubuntu VM with **Docker** and **Jenkins** installed
 
 ### Install ArgoCD Image Updater
 - Navigate to `cd tools/argocd-image-updater` and run this command: `kubectl apply -f 0-install-argocd-image-updater.yaml`
-- Create docker registry secret `azure-container-secret` in `agrocd` namespace. This is to allow the Argo CD Image Updater to pull the docker images from the ACR. Please refer here to create a new Service Principal for the ACR: [Pull images from an Azure container registry to a Kubernetes cluster using a pull secret](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes). This will allow the helm to pull the images from the ACR: 
+- Create docker registry secret `azure-container-secret` in `agrocd` namespace. This is to allow the Argo CD Image Updater to pull the docker images from the ACR. Please refer here to create a new Service Principal for the ACR: [Pull images from an Azure container registry to a Kubernetes cluster using a pull secret](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes). This will allow the ArgoCD Image Updater to fetch/list the images tag/version from the ACR: 
     `kubectl  create  secret  docker-registry  azure-container-secret 
     		--namespace  agrocd 
 			--docker-server=<container registry name>.azurecr.io 
@@ -81,12 +81,15 @@ This will provision an Ubuntu VM with **Docker** and **Jenkins** installed
 ### Setup Istio
 - TBD
 ### Setup Jenkins on Virtual Machine
-The step **Provision Virtual Machine** has already installed a Jenkins. Please refer to [How To Install Jenkins on Ubuntu 22.04](https://www.cherryservers.com/blog/how-to-install-jenkins-on-ubuntu-22-04) **(starts from step #6: Set up Jenkins)**. 
+The step [**Provision Virtual Machine**](#provision-virtual-machine-vms) has already installed a Jenkins. Please refer to [How To Install Jenkins on Ubuntu 22.04](https://www.cherryservers.com/blog/how-to-install-jenkins-on-ubuntu-22-04) **(starts from step #6: Set up Jenkins)**. 
 While setup the Jenkins, please make sure the plugins below get installed
 - Jenkins suggested plugins
 - Docker PipelineVersion
 - Pipeline Utility Steps
 - HTML Publisher
+
+For further details of the setup, please visit [sd2411_devops_ci](https://github.com/sieunhantanbao/sd2411-devops-ci)
+
 ## Deploy application with ArgoCD
 ### Deploy application
 - Change directory (cd) to argocd/helm/{environment_name} (i.e. `cd argocd/helm/qa`) and run the below commands
