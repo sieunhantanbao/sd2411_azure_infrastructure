@@ -40,8 +40,9 @@ This will provision an Ubuntu VM with **Docker** and **Jenkins** installed
 	- `terraform plan --out tfplan.out`
 	- `terraform apply tfplan.out`
 
-<u>Note:</u> The script to install **Docker**, **Jenkins**, **Trivy**, and **Kubectl** can be found in `azure-user-data.sh`
+<u>Note:</u> The script to install **Docker**, **Jenkins**, **Trivy**, and **Kubectl** can be found in `iac/terraform/vm/azure-user-data.sh`
 
+## Software/Tools setup
 ### Install ArgoCD (with helm support enable)
 - Get AKS credential: `az aks get-credentials --resource-group <your_resource_group_name> --name <your_aks_cluster_name>`
 - Create argocd namespace: `kubectl create namespace argocd`
@@ -86,5 +87,5 @@ While setup the Jenkins, please make sure the plugins below get installed
 ## Manage the application on the ArgoCD UI
 ### Demonstration screenshot
 - ArgoCD UI <br/> ![image info](./images/argocd_qa_apps.png)
-- Frontend-qa application <br/> ![image info](./images/frontend-qa1.png)
+- Frontend-qa application (`kubectl port-forward service/frontend 80:3000 -n qa`) <br/> ![image info](./images/frontend-qa1.png)
 - ArgoCD UI (multiple environments) <br/> ![image info](./images/argocd_qa_apps_multi_envs.png)
