@@ -28,7 +28,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     node_count          = var.agent_count
     vm_size             = "Standard_B2s_v2"
     type                = "VirtualMachineScaleSets"
-    availability_zones  = ["1", "2"]
+    availability_zones  = ["2", "3"]
     vnet_subnet_id      = azurerm_subnet.worker_nodes_subnet.id
   }
 

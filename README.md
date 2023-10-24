@@ -1,4 +1,4 @@
-# SD2411 Infrastructure
+# SD2411 Infrastructure and ArgoCD
 ## Reference Repositories
 | Repository | Description |
 |--|--|
