@@ -1,5 +1,5 @@
 variable resource_group_location {
-  default       = "southeastasia"
+  default       = "westcentralus"
   description   = "Location of the resource group."
 }
 
@@ -8,15 +8,15 @@ variable agent_count {
 }
 
 variable dns_prefix {
-    default = "sd2411-my-todo-dns-new"
+    default = "sd2411-my-todo-dns"
 }
 
 variable cluster_name {
-    default = "sd2411_k8s_cluster_new"
+    default = "sd2411_k8s_cluster"
 }
 
 variable resource_group_name {
-    default = "rg_sd2411_aks_new"
+    default = "rg_sd2411_aks"
 }
 
 variable admin_username {
