@@ -78,8 +78,10 @@ This will provision an Ubuntu VM with **Docker**, **Jenkins**, **Trivy**, and **
 ### Setup Prometheus and Grafana (monitoring)
 - Navigate to `cd tools/monitoring` and run this command `sh install-monitoring-tools.sh`. For more details, please visit [HERE](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/using-azure-kubernetes-service-with-grafana-and-prometheus/ba-p/3020459).
 
-### Setup Istio
-- TBD
+### Install Istio and addons (Kiali, Prometheus and Grafana)
+- Follow this [GUIDE](https://istio.io/latest/docs/setup/install/istioctl/) to install Istio with Istioctl tool to the Kubernetes cluster.
+
+
 ### Setup Jenkins on Virtual Machine
 The step [**Provision Virtual Machine**](#provision-virtual-machine-vms) has already installed a Jenkins. Please refer to [How To Install Jenkins on Ubuntu 22.04](https://www.cherryservers.com/blog/how-to-install-jenkins-on-ubuntu-22-04) **(starts from step #6: Set up Jenkins)**. 
 While setup the Jenkins, please make sure the plugins below get installed
