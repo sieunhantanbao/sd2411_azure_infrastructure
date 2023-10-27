@@ -78,7 +78,7 @@ This will provision an Ubuntu VM with **Docker**, **Jenkins**, **Trivy**, and **
 ### Setup Prometheus and Grafana (monitoring)
 - Navigate to `cd tools/monitoring` and run this command `sh install-monitoring-tools.sh`. For more details, please visit [HERE](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/using-azure-kubernetes-service-with-grafana-and-prometheus/ba-p/3020459).
 
-### Install Istio and addons (Kiali, Prometheus and Grafana)
+### Install Istio
 - Follow this [GUIDE](https://istio.io/latest/docs/setup/install/istioctl/) to install Istio with Istioctl tool to the Kubernetes cluster.
 
 
@@ -92,7 +92,7 @@ While setup the Jenkins, please make sure the plugins below get installed
 
 For further details of the setup, please visit [sd2411_devops_ci](https://github.com/sieunhantanbao/sd2411-devops-ci)
 
-## Deploy application with ArgoCD
+## Deploy application with ArgoCD and Demonstration
 ### Deploy application
 - Change directory (cd) to argocd/helm/{environment_name} (i.e. `cd argocd/helm/qa`) and run the below commands
 	- Deploy the Azure Container Registry (ACR) secret. Please refer here to create a new Service Principal for the ACR: [Pull images from an Azure container registry to a Kubernetes cluster using a pull secret](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes). This will allow the helm to pull the images from the ACR.
@@ -110,3 +110,7 @@ For further details of the setup, please visit [sd2411_devops_ci](https://github
 - ArgoCD UI <br/> ![ArgoCD UI](./images/argocd_qa_apps.png)
 - Frontend-qa application (`kubectl port-forward service/frontend 80:3000 -n qa`) <br/> ![Frontend UI](./images/frontend-qa1.png)
 - ArgoCD UI (multiple environments) <br/> ![ArgoCD manage multiple environments](./images/argocd_qa_apps_multi_envs.png)
+
+## Monitoring with Prometheus and Grafana
+- Prometheus ![Prometheus](./images/prometheus.png)
+- Grafana ![Grafana](./images/grafana.png)
