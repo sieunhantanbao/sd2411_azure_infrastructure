@@ -101,7 +101,7 @@ For further details of the setup, please visit [sd2411_devops_ci](https://github
 --docker-server=<container registry name>.azurecr.io  \
 --docker-username=<Service principal ID>  \
 --docker-password=<Service principal password>`
-	- Deploy database: `kubectl apply -f 1-postgres.yml`
+	- Deploy database: `kubectl apply -f 1-mongo.yml`
 	- Deploy backend: `kubectl apply -f 2-backend.yml`
 	- Deploy frontend: `kubectl apply -f 3-frontend.yml`
 
