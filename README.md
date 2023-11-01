@@ -79,7 +79,8 @@ This will provision an Ubuntu VM with **Docker**, **Jenkins**, **Trivy**, and **
 - Navigate to `cd tools/monitoring` and run this command `sh install-monitoring-tools.sh`. For more details, please visit [HERE](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/using-azure-kubernetes-service-with-grafana-and-prometheus/ba-p/3020459).
 
 ### Install Istio
-- Follow this [GUIDE](https://istio.io/latest/docs/setup/install/istioctl/) to install Istio with Istioctl tool to the Kubernetes cluster.
+- Follow this [instruction](https://learn.microsoft.com/en-us/azure/aks/istio-deploy-addon) to enable the Istio on the AKS cluster.
+- If you do not use the AKS then follow this [GUIDE](https://istio.io/latest/docs/setup/install/istioctl/) to install Istio with Istioctl tool to the Kubernetes cluster.
 
 
 ### Setup Jenkins on Virtual Machine
