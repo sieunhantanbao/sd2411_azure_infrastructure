@@ -8,9 +8,9 @@
 
 ==========================================================================
 Videos & documents
-0-PiSharpAssigment-Overview.mp4
-1-PiSharpAssigment-FullDemo_End2End.mp4
-2-PiSharpAssigment-SetupInfrastructure.docx
-3-PiSharpAssigment-SetupJenkinSharedLibrary.docx
-4-PiSharpAssigment-ReviewArgoCD_DeploymentManifest.mp4
-5-PiSharpAssigment-Monitoring.docx
+0-PiShapedAssigment-Overview.mp4
+1-PiShapedAssigment-FullDemo_End2End.mp4
+2-PiShapedAssigment-SetupInfrastructure.docx
+3-PiShapedAssigment-SetupJenkinSharedLibrary.docx
+4-PiShapedAssigment-ReviewArgoCD_DeploymentManifest.mp4
+5-PiShapedAssigment-Monitoring.docx
