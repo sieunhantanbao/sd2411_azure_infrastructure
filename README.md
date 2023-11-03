@@ -1,4 +1,31 @@
-# SD2411 Infrastructure and ArgoCD
+# SD2411 Infrastructure and ArgoCD <!-- omit in toc -->
+## Table Of Content  <!-- omit in toc -->
+- [Reference Repositories](#reference-repositories)
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Prerequisite Tools](#prerequisite-tools)
+- [Infrastructure set up](#infrastructure-set-up)
+	- [Provision Azure Kubernetes Service (AKS)](#provision-azure-kubernetes-service-aks)
+	- [Provision Azure Container Registry (ACR)](#provision-azure-container-registry-acr)
+	- [Provision Virtual Machine (VMs)](#provision-virtual-machine-vms)
+- [Software/Tools setup](#softwaretools-setup)
+	- [Install ArgoCD (with helm support enable)](#install-argocd-with-helm-support-enable)
+	- [Install ArgoCD Image Updater](#install-argocd-image-updater)
+	- [Install Argo Rollouts and Kubernetes Plugin (kubectl argo rollout)](#install-argo-rollouts-and-kubernetes-plugin-kubectl-argo-rollout)
+	- [Setup Prometheus and Grafana (monitoring)](#setup-prometheus-and-grafana-monitoring)
+	- [Install Istio](#install-istio)
+	- [Setup Jenkins on Virtual Machine](#setup-jenkins-on-virtual-machine)
+- [Deploy application with ArgoCD and Demonstration](#deploy-application-with-argocd-and-demonstration)
+	- [Deploy application](#deploy-application)
+- [Manage the application on the ArgoCD UI](#manage-the-application-on-the-argocd-ui)
+	- [Demonstration screenshot](#demonstration-screenshot)
+- [Monitoring with Prometheus and Grafana](#monitoring-with-prometheus-and-grafana)
+- [Cleanup Azure resources](#cleanup-azure-resources)
+	- [Cleanup Azure Kubernetes Service (AKS)](#cleanup-azure-kubernetes-service-aks)
+	- [Cleanup Azure Virtual Machine (VMs)](#cleanup-azure-virtual-machine-vms)
+	- [Cleanup Azure Container Registry (ACR)](#cleanup-azure-container-registry-acr)
+
+
 ## Reference Repositories
 | Repository | Description |
 |--|--|
