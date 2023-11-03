@@ -115,3 +115,20 @@ For further details of the setup, please visit [sd2411_devops_ci](https://github
 ## Monitoring with Prometheus and Grafana
 - Prometheus ![Prometheus](./images/prometheus.png)
 - Grafana ![Grafana](./images/grafana.png)
+
+## Cleanup Azure resources
+### Cleanup Azure Kubernetes Service (AKS)
+- Change directory (cd) to iac/terraform/aks/ha: `cd iac/terraform/aks/ha`
+- Run the below command
+	- `terraform destroy`
+- Type: `yes` to confirm the cleanup.
+### Cleanup Azure Virtual Machine (VMs)
+- Change directory (cd) to iac/terraform/vm: `cd iac/terraform/vm`
+- Run the below command
+	- `terraform destroy`
+- Type: `yes` to confirm the cleanup.
+### Cleanup Azure Container Registry (ACR)
+- Change directory (cd) to iac/terraform/acr: `cd iac/terraform/acr`
+- Run the below command
+	- `terraform destroy`
+- Type: `yes` to confirm the cleanup.
